@@ -11,8 +11,6 @@ import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
 // data imports
-import User from "./models/User.js";
-import { dataUser } from "./data/index.js";
 
 /* CONFIGURATION */
 dotenv.config();
