@@ -16,7 +16,6 @@ export const getUser = async (req, res) => {
 export const getDashboardStats = async (req, res) => {
   try {
     // harcoded Values in order to get data from 2021
-    const currentMonth = "November";
     const currentYear = 2021;
     const currentDay = "2021-11-15";
 
