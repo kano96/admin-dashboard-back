@@ -15,7 +15,7 @@ export const getUser = async (req, res) => {
 
 export const getDashboardStats = async (req, res) => {
   try {
-    // harcoded Values
+    // harcoded Values in order to get data from 2021
     const currentMonth = "November";
     const currentYear = 2021;
     const currentDay = "2021-11-15";
@@ -34,11 +34,10 @@ export const getDashboardStats = async (req, res) => {
       yearlySalesTotal,
       monthlyData,
       salesByCategory,
-    } = overallStat;
+    } = overallStat[0];
 
-    const thisMonthStats = overallStat[0].monthlyData.find(
-      ({ month }) => month === currentMonth
-    );
+    const thisMonthStats = overallStat[0].monthlyData.slice(0, 12);
+
     const todayStats = overallStat[0].dailyData.find(
       ({ date }) => date === currentDay
     );
