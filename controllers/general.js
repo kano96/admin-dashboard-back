@@ -35,7 +35,8 @@ export const getDashboardStats = async (req, res) => {
       salesByCategory,
     } = overallStat[0];
 
-    const thisMonthStats = overallStat[0].monthlyData.slice(0, 12);
+    // TODO: Replace this when data has month included
+    const thisMonthStats = overallStat[0].monthlyData[4].totalSales;
 
     const todayStats = overallStat[0].dailyData.find(
       ({ date }) => date === currentDay
